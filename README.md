@@ -1,8 +1,9 @@
 # install postgres if not installed already, skip if installed
 sudo apt install postgresql
 
-# create user user; set password as password on prompt(or use any password but remember to change in the application properties)
-# (select y for the second option that is allow the user to create database)
+# creating user user;
+###set password as password on prompt(or use any password but remember to change in the application properties)
+### (select y for the second option that is allow the user to create database)
 sudo -u postgres createuser --interactive --password user
 
 # create database with user as the owner
@@ -15,8 +16,8 @@ psql --user user -d testdb -W
 
 #################################################################################
 # For running the application:
-# make sure java 8 is installed.
-# Install postman, required to test the api for upload.
+### make sure java 8 is installed.
+### Install postman, required to test the api for upload.
 java -jar <jar_name>.jar
 
 # make sure that port 8080 is free, or the application won't start.
