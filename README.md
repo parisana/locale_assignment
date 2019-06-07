@@ -23,10 +23,17 @@ java -jar <jar_name>.jar
 # now once the application is up and running, open postman
 # In postman
   1.set url to : localhost:8080/file-upload/csv
+
 	set request type to: POST (located just at the left of the url)
+
 	select the "body" and select "form-data"
+
 		in the KEY field type "file", change value type to file and select "choose file",
+
 		now select the csv file and hit "Send"
+
 	You should get success and failure count as the response, and the data should be saved to the database.
+
   2.get request, set url to : localhost:8080/query/search?id=1
+
     and hit send to get the list of failed rows data.
